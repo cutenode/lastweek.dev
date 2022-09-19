@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ title or metadata.title }}</title>
+<meta name="description" content="{{ description or metadata.description }}">
+<link rel="stylesheet" href="{{ "/css/main.css" | urlize }}">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@bitandbang" />
+<meta property="og:url" content="https://lastweek.dev{{page.url}}" />
+<meta property="og:title" content="{{ title or metadata.title }}" />
+<meta property="og:description" content="{{ description or metadata.description }}" />
+<meta name="twitter:image" content="https://lastweek.dev/img/small-card.png" />
+<meta property="og:image" content="https://lastweek.dev/img/small-card.png" />
+
+
+</head>
+<body class="defaultfont">
+  <header class="global">
+    <section class="container">
+      <section class=grow-4>
+        <a href="{{ "/" | urlize}}"><h1>lastweek.dev</h1></a>
+      </section>
+      <nav>
+        <a href="https://github.com/cutenode/lastweek.dev" class="p-l-1rem">GitHub</a>
+      </nav>
+    </section>
+  </header>
+  <section>
+    {{ content | safe}}
+  </section>
+  <footer></footer>
+</body>
+</html>

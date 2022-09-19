@@ -1,0 +1,23 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-report
+---
+<section class="report container column">
+  <h1 class="report-title">{{ title }}</h2>
+  <sub>Originally reported on <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>{% if series %} as part {{ part }} of the <a href="{{ '/series/' + series | urlize }}">{{ seriesData[series].title }}</a> series.{% endif %}
+</sub>
+  {{ content | safe }}
+</section>
+<section class="poke">
+  {%- if collections.reports %}
+  {%- set nextReport = collections.reports | getNextCollectionItem(page) %}
+  {%- set previousReport = collections.reports | getPreviousCollectionItem(page) %}
+  {%- if nextReport or previousReport %}
+  <hr>
+  <ul>
+    {%- if nextReport %}<li>Next: <a href="{{ nextReport.url | urlize }}">{{ nextReport.data.title }}</a></li>{% endif %}
+    {%- if previousReport %}<li>Previous: <a href="{{ previousReport.url | urlize }}">{{ previousReport.data.title }}</a></li>{% endif %}
+  </ul>
+  {%- endif %}
+  {%- endif %}
+</section>

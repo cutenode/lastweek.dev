@@ -1,0 +1,134 @@
+/** fonts **/ 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
+.standard-line-height {
+  line-height: 1.5rem;
+}
+
+.roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.roboto-condensed {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.weight-400 {
+  font-weight: 400;
+}
+
+.weight-700 {
+  font-weight: 700;
+}
+
+.roboto {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+.italic {
+  font-style: italic;
+}
+
+/** basics **/ 
+body {
+  max-width: 600px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+footer {  
+  margin-bottom: 30rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: underline;
+  color: #ff0099;
+  transition-property: color, text-decoration;
+  transition-duration: 300ms;
+}
+
+h3 a {
+  text-decoration: underline;
+  color: #000;
+  transition-property: color, text-decoration;
+  transition-duration: 300ms;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #ff00ff;
+  transition-property: color, text-decoration;
+  transition-duration: 300ms;
+}
+
+.global a {
+  text-decoration: none;
+  color: #000;
+  transition-property: color, text-decoration;
+  transition-duration: 300ms;
+}
+
+.global a:hover {
+  text-decoration: underline;
+  color: #ff00ff;
+  transition-property: color, text-decoration;
+  transition-duration: 300ms;
+}
+
+.container {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.global > .container {
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.post-title {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+}
+
+.grow-4 {
+  flex-grow: 4;
+}
+
+.p-l-1rem {
+  padding-left: 1rem;
+}
+
+.post-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+
+.post-list-description::before {
+  content: '> ';
+  margin-right: 0.5rem;
+}
+
+.post-list-read-more::before {
+  content: '[';
+}
+
+.post-list-read-more::after {
+  content: '...]';
+}
+
+.post-list-entry a {
+  text-decoration: none;
+}
+
+.no-bold {
+  font-weight: normal;
+}

@@ -1,0 +1,22 @@
+{
+  "name": "lastweek.dev",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx @11ty/eleventy --incremental",
+    "build:dryrun": "npx @11ty/eleventy --dryrun",
+    "serve": "npx @11ty/eleventy --serve",
+    "watch": "npx @11ty/eleventy --watch"
+  },
+  "keywords": [],
+  "author": "Tierney Cyren <hello@bnb.im> (https://bnb.im/)",
+  "license": "MIT",
+  "devDependencies": {
+    "standard": "^17.0.0"
+  },
+  "dependencies": {
+    "@retrogen/generate": "^0.0.2",
+    "luxon": "^2.4.0"
+  }
+}
