@@ -10,6 +10,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.4.1"
+    "@retrogen/generate": "^0.0.2",
+    "astro": "^2.4.1",
+    "luxon": "^3.3.0"
   }
 }
